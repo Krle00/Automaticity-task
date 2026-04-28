@@ -23,8 +23,9 @@ class HomePage {
     }
 
     visitSite() {
+        cy.intercept('GET', '**/module/productcomments/CommentGrade*').as('pageLoad1')
         cy.visit('https://demo.prestashop.com/')
-        cy.wait(11000)
+        cy.wait('@pageLoad1', { timeout: 15000 })
     }
 
 } export default HomePage

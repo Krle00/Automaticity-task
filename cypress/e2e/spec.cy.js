@@ -9,9 +9,9 @@ describe('Automaticity_Test', () => {
   beforeEach(() =>{
     homePage.visitSite()
     homePage.clickSignInBtn()
-    cy.wait(4000)
+    registerPage.waitForPageLoad()
     homePage.clickCreateAccountBtn()
-    cy.wait(4000)
+    registerPage.waitForPageLoad()
   })
 
   let sharedEmail
@@ -57,7 +57,7 @@ describe('Automaticity_Test', () => {
     registerPage.clickNewsBox()
     registerPage.clickPrivacyBox()
     registerPage.clickCreateAccBtn()
-    cy.wait(3000)
+    registerPage.waitForPageLoad()
     registerPage.assertUsedEmail()
 
   })

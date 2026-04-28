@@ -100,6 +100,9 @@ class RegisterPage {
         this.elements.getIframe()
     }
 
+    waitForPageLoad() {
+        cy.wait(2000)
+    }
 
 
 } export default RegisterPage
