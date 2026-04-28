@@ -31,6 +31,7 @@ describe('Automaticity_Test', () => {
     registerPage.clickNewsBox()
     registerPage.clickPrivacyBox()
     registerPage.clickCreateAccBtn()
+    homePage.assertSuccessfulReg()
 
   })
 

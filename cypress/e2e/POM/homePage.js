@@ -8,6 +8,7 @@ class HomePage {
         },
         getSignInBtn: () => cy.get('@iframebody').contains('Sign in'),
         getCreateAccountBtn: () => cy.get('@iframebody').find('[data-link-action="display-register-form"]'),
+        getLorem: () => cy.get('@iframebody').contains('Lorem ipsum')
     }
 
     clickSignInBtn() {
@@ -26,6 +27,13 @@ class HomePage {
         cy.intercept('GET', '**/module/productcomments/CommentGrade*').as('pageLoad1')
         cy.visit('https://demo.prestashop.com/')
         cy.wait('@pageLoad1', { timeout: 15000 })
+    }
+
+    assertSuccessfulReg() {
+        cy.wait(3000)
+        this.elements.getIframe()
+        cy.wait(3000)
+        this.elements.getLorem().should('be.visible')
     }
 
 } export default HomePage
