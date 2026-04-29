@@ -16,9 +16,11 @@ describe('Automaticity_Test', () => {
 
   let sharedEmail
 
-  it('successful_registration', () => {
-
+  before (() => {
     sharedEmail = 'john' + Date.now() + '@abc.mail'
+  })
+
+  it('successful_registration', () => {
 
     registerPage.clickMrGender()
     registerPage.typeIntoFirstName('John')

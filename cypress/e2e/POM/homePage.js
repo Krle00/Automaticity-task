@@ -8,19 +8,17 @@ class HomePage {
         },
         getSignInBtn: () => cy.get('@iframebody').contains('Sign in'),
         getCreateAccountBtn: () => cy.get('@iframebody').find('[data-link-action="display-register-form"]'),
-        getLorem: () => cy.get('@iframebody').contains('Lorem ipsum')
+        getRegAssert: () => cy.get('@iframebody').contains('John Johnson')
     }
 
     clickSignInBtn() {
         this.elements.getIframe()
         this.elements.getSignInBtn().click()
-        this.elements.getIframe()
     }
 
     clickCreateAccountBtn() {
         this.elements.getIframe()
         this.elements.getCreateAccountBtn().click()
-        this.elements.getIframe()
     }
 
     visitSite() {
@@ -33,7 +31,7 @@ class HomePage {
         cy.wait(3000)
         this.elements.getIframe()
         cy.wait(3000)
-        this.elements.getLorem().should('be.visible')
+        this.elements.getRegAssert().should('be.visible')
     }
 
 } export default HomePage

@@ -23,81 +23,60 @@ class RegisterPage {
     }
 
     typeIntoFirstName(firstname) {
-        this.elements.getIframe()
+
         this.elements.getNameField().type(firstname)
         this.elements.getIframe()
     }
 
     typeIntoLastName(lastname) {
-        this.elements.getIframe()
         this.elements.getLastNameField().type(lastname)
-        this.elements.getIframe()
     }
 
     typeIntoEmail(email) {
-        this.elements.getIframe()
         this.elements.getEmailField().type(email)
-        this.elements.getIframe()
     }
 
     typeIntoPassword(password) {
-        this.elements.getIframe()
         this.elements.getPasswordField().type(password)
-        this.elements.getIframe()
     }
 
     typeIntoBirthday(birthday) {
-        this.elements.getIframe()
         this.elements.getBirthdayField().type(birthday)
-        this.elements.getIframe()
     }
 
     clickMrGender() {
         this.elements.getIframe()
         this.elements.getMrGender().click()
-        this.elements.getIframe()
     }
     
     clickMrsGender() {
         this.elements.getIframe()
         this.elements.getMrsGender().click()
-        this.elements.getIframe()
     }
 
     clickOfferBox() {
-        this.elements.getIframe()
         this.elements.getOfferBox().click()
-        this.elements.getIframe()
     }
 
     clickTermsBox() {
-        this.elements.getIframe()
         this.elements.getTermsBox().click()
-        this.elements.getIframe()
     }
 
     clickNewsBox () {
-        this.elements.getIframe()
         this.elements.getNewsBox().click()
-        this.elements.getIframe()
     }
 
     clickPrivacyBox () {
-        this.elements.getIframe()
         this.elements.getPrivacyBox().click()
-        this.elements.getIframe()
     }
 
     clickCreateAccBtn () {
-        this.elements.getIframe()
         this.elements.getCreateAccBtn().click()
-        this.elements.getIframe()
     }
 
     assertUsedEmail () {
         this.elements.getIframe()
         this.elements.getUsedEmailMsg().should('be.visible')
-        this.elements.getIframe()
     }
 
     waitForPageLoad() {
